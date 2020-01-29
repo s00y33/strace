@@ -2,6 +2,7 @@ Noteworthy changes in release ?.?? (????-??-??)
 ===============================================
 
 * Improvements
+  * Implemented displaying of SELinux contexts (--secontext[=full] option).
 
 * Bug fixes
   * Fixed build using bionic libc.

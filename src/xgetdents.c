@@ -122,6 +122,9 @@ xgetdents(struct tcb *const tcp, const unsigned int header_size,
 {
 	if (entering(tcp)) {
 		printfd(tcp, tcp->u_arg[0]);
+#ifdef USE_SELINUX
+		tcp->last_dirfd = (int) tcp->u_arg[0];
+#endif
 		tprints(", ");
 		return 0;
 	}
